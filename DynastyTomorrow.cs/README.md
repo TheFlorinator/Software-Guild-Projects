@@ -1,0 +1,2 @@
+# Software-Guild-Projects
+Dynasty Tomorrow was the second project that I worked on, it was made for a mock flooring company to track customers, and orders. It is a console application that reads and writes from a text file. For this project we partner planned, but wrote our own code. 
