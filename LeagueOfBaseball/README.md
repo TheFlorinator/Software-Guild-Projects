@@ -1,2 +1,2 @@
 # Software-Guild-Projects
-League of Baseball is the second web application that I created, it is for managing a softball league. Users are able to add, edit, and delete players, as well as, teams. This was my first project that I hooked into a local database using Microsoft SQL server Management Studio. I used Dapper on the back end to access the database.
+League of Baseball was the second web application that I created, it is for managing a softball league. Users are able to add, edit, and delete players, as well as, teams. This was my first project that I hooked into a local database using Microsoft SQL server Management Studio. I used Dapper on the back end to access the database.

@@ -1,2 +1,2 @@
 # Software-Guild-Projects
-PortalOfLife is the third project that I made, this is the first web application that I created. It was made for a mock company for managing HR policies. I used XML serialization for persisting data.
+PortalOfLife was the third project that I made, this is the first web application that I created. It was made for a mock company for managing HR policies. I used XML serialization for persisting data.
