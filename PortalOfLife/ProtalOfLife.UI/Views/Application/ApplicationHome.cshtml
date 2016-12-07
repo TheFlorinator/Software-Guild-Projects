@@ -1,0 +1,78 @@
+﻿@model ProtalOfLife.Models.Data.Applicant
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Apply for a job", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Provide necessary informtaion below</h3>
+                <div class="row">
+                    @using (Html.BeginForm())
+            {
+                        @Html.ValidationSummary(true)
+                        <div class="col-xs-12 col-sm-7">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Apply</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <label>First Name:</label>
+                                        @Html.TextBoxFor(a => a.FirstName, new { @class = "form-control", placeHolder = "First Name" })
+                                        @Html.ValidationMessageFor(a => a.FirstName)
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Last Name:</label>
+                                        @Html.TextBoxFor(a => a.LastName, new { @class = "form-control", placeHolder = "Last Name" })
+                                        @Html.ValidationMessageFor(a => a.LastName)
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Resume:</label>
+                                        @Html.TextAreaFor(a => a.Resume, new { @class = "form-control", placeHolder = "You may copy and paste your resume here" })
+                                        @Html.ValidationMessageFor(a => a.Resume)
+                                    </div>
+                                    @*@Html.ActionLink("Save", "ConfirmApplication", "Application", new { @class = "btn btn-md btn-danger" }, new { name = Model.FirstName })*@
+                                    <button class="btn btn-primary">Save</button>
+                                    @Html.ActionLink("Canel", "ApplicationHome", "Applicant", null, new { @class = "btn btn-md btn-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Florin Software</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
+

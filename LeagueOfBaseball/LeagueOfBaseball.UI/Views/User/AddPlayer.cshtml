@@ -1,0 +1,57 @@
+﻿@model LeagueOfBaseball.UI.Models.PlayerVM
+@{
+    ViewBag.Title = "AddPlayer";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Add Player</h3>
+        <div class="row">
+            @using (Html.BeginForm())
+            {
+                <fieldset>
+                    @Html.ValidationSummary(true)
+                <div class="col-xs-12 col-sm-7">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Personal Details</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label>Player Name:</label>
+                                @Html.TextBoxFor(p => p.Player.Name, new { @class = "form-control", placeHolder = "Name" })
+                                @Html.ValidationMessageFor(model => model.Player.Name)
+                            </div>
+                            <div class="form-group">
+                                <label>Team Name:</label>
+                                @Html.DropDownListFor(p => p.Player.TeamName, Model.TeamList, "-Choose One-", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Player.TeamName)
+                            </div>
+                            <div class="form-group">
+                                <label>Position:</label>
+                                @Html.EnumDropDownListFor(p => p.position, "-Select Position-", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Player.PositionId)
+                            </div>
+                            <div class="form-group">
+                                <label>Jersey Number:</label>
+                                @Html.TextBoxFor(p => p.Player.JerseyNumber, new { @class = "form-control", placeHolder = "Number" })
+                                @Html.ValidationMessageFor(model => model.Player.JerseyNumber)
+                            </div>
+                            <div class="form-group">
+                                <label>Number of Years Played:</label>
+                                @Html.TextBoxFor(p => p.Player.NumberYearsPlayed, new { @class = "form-control", placeHolder = "Years Played" })
+                            </div>
+                            <div class="form-group">
+                                <label>Batting Average:</label>
+                                @Html.TextBoxFor(p => p.Player.BattingAverage, new { @class = "form-control", placeHolder = "Batting Average" })
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            }
+        </div>
+    </div>
+</div>
+

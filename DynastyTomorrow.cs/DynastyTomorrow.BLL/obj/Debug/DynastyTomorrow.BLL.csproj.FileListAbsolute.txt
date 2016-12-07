@@ -1,0 +1,9 @@
+C:\src\softwareGuild\repos\jason-florin-individual-work\DynastyTomorrow.cs\DynastyTomorrow.BLL\bin\Debug\DynastyTomorrow.BLL.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\DynastyTomorrow.cs\DynastyTomorrow.BLL\bin\Debug\DynastyTomorrow.BLL.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\DynastyTomorrow.cs\DynastyTomorrow.BLL\bin\Debug\DynastyTomorrow.Data.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\DynastyTomorrow.cs\DynastyTomorrow.BLL\bin\Debug\DynastyTomorrow.Models.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\DynastyTomorrow.cs\DynastyTomorrow.BLL\bin\Debug\DynastyTomorrow.Data.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\DynastyTomorrow.cs\DynastyTomorrow.BLL\bin\Debug\DynastyTomorrow.Models.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\DynastyTomorrow.cs\DynastyTomorrow.BLL\obj\Debug\DynastyTomorrow.BLL.csprojResolveAssemblyReference.cache
+C:\src\softwareGuild\repos\jason-florin-individual-work\DynastyTomorrow.cs\DynastyTomorrow.BLL\obj\Debug\DynastyTomorrow.BLL.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\DynastyTomorrow.cs\DynastyTomorrow.BLL\obj\Debug\DynastyTomorrow.BLL.pdb

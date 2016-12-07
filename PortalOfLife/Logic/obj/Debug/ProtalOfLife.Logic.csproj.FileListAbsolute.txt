@@ -1,0 +1,9 @@
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Logic\bin\Debug\Logic.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Logic\bin\Debug\Logic.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Logic\bin\Debug\Data.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Logic\bin\Debug\Models.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Logic\bin\Debug\Data.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Logic\bin\Debug\Models.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Logic\obj\Debug\ProtalOfLife.Logic.csprojResolveAssemblyReference.cache
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Logic\obj\Debug\Logic.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Logic\obj\Debug\Logic.pdb

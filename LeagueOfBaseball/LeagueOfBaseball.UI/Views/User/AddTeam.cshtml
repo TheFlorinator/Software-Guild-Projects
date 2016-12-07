@@ -1,0 +1,36 @@
+﻿@model LeagueOfBaseball.Models.DTO.Team
+@{
+    ViewBag.Title = "AddTeam";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Add Team</h3>
+        <div class="row">
+            @using (Html.BeginForm())
+            {
+                <fieldset>
+                    @Html.ValidationSummary(true)
+                    <div class="col-xs-12 col-sm-7">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Add Policy</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label>Team Name:</label>
+                                    @Html.TextBoxFor(t => t.Name, new { @class = "form-control", placeHolder = "Team Name" })
+                                    @Html.ValidationMessageFor(model => model.Name)
+                                </div>
+                                <button class="btn btn-primary">Save</button>
+                                @Html.ActionLink("Canel", "index", "main", null, new { @class = "btn btn-md btn-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            }
+        </div>
+    </div>
+</div>
+
+

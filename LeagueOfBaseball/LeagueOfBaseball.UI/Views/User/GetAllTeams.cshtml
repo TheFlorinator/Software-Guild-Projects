@@ -1,0 +1,63 @@
+﻿@model LeagueOfBaseball.UI.Models.TeamsVM
+
+@{
+    ViewBag.Title = "GetAllTeams";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>View Teams</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(Model => Model.Team.Name)
+            <div class="form-group">
+                <label>Teams:</label>
+                @Html.DropDownList("currentTeamName", Model.TeamList.Select(t => new SelectListItem { Text = t.Name, Value = t.Name.ToString() }), "-Choose One-", new { @class = "form-control" })
+                <button type="submit" value="edit" id="add" class="btn btn-danger">Edit Team</button>
+            </div>
+            <button type="submit" class="btn btn-primary">View Players</button>
+            <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                </div>
+            </div>
+        }
+    </div>
+</div>
+@if (Model.PlayerList != null)
+{
+    <div class="col-xs-12">
+        <table id="myTable" class="table table-striped" style="width: auto">
+            <thead>
+                <tr>
+                    <th>Players</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Player in Model.PlayerList)
+                {
+                    <tr>
+                        <td>@Html.ActionLink(Player.Name, "GetOnePlayer", "user", new { id = Player.PlayerId }, null) </td>
+                        <td>| @Html.ActionLink("Edit", "EditOnePlayer", "user", new { id = Player.PlayerId }, null)</td>
+                        <td>| @Html.ActionLink("Delete", "DeletePlayer", "user", new { id = Player.PlayerId }, null)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+@section scripts{
+    <script>
+        $(function () {
+            $('#add').click(function () {
+                $('form').attr('action', '/user/EditTeam').attr('method', 'get');
+            });
+        });
+</script>
+    }
+    
+ 

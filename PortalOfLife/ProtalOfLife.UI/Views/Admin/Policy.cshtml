@@ -1,0 +1,24 @@
+﻿@model ProtalOfLife.Models.Responses.PolicyResponse
+
+@{
+    ViewBag.Title = "Policy";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(p => p.NewPolicy.Name)
+            <div class="form-group">
+                <h4>@Html.DisplayFor(p => p.NewPolicy.Name)</h4>
+                @Html.DisplayTextFor(p => p.NewPolicy.Content)
+            </div>
+            @Html.ActionLink((string)ViewBag.LinkText, (string)ViewBag.LinkAction, (string)ViewBag.LinkController)
+        }
+    </div>
+   
+</div>

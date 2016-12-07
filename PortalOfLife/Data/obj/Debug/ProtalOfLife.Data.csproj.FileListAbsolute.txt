@@ -1,0 +1,7 @@
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Data\bin\Debug\Data.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Data\bin\Debug\Data.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Data\bin\Debug\Models.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Data\bin\Debug\Models.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Data\obj\Debug\ProtalOfLife.Data.csprojResolveAssemblyReference.cache
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Data\obj\Debug\Data.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\Data\obj\Debug\Data.pdb

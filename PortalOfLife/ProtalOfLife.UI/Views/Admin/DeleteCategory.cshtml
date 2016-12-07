@@ -1,0 +1,22 @@
+﻿@model ProtalOfLife.Models.Responses.CategoryResponse
+@{
+    ViewBag.Title = "DeleteCategory";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Delete Category</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        @using (Html.BeginForm("DeleteThatCategory", "Admin", new { categoryName = Model.NewCategory.Name }, FormMethod.Post))
+        {
+            <p>Are you sure that you wish to delete the @Html.DisplayFor(c => c.NewCategory.Name) Category?</p>
+            <h4>All policies in @Html.DisplayFor(c => c.NewCategory.Name) will be deleted!!</h4>
+            <button type="submit" class="btn btn-md btn-danger">Delete</button>
+            @Html.ActionLink("Cancel", "ViewCategories", "Admin", null, new { @class = "btn btn-md btn-info" })
+        }
+        
+    </div>
+</div>

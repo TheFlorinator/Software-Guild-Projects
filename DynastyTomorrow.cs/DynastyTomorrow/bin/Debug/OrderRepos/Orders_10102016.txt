@@ -1,0 +1,2 @@
+OrderNumber|?|CustomerName|?|State|?|TaxRate|?|ProductType|?|Area|?|CostPerSquareFoot|?|LaborCostPerSquareFoot|?|MaterialCost|?|LaborCost|?|Tax|?|Total|?|Date
+1|?|JamesonJames|?|WI|?|2.5|?|TILE|?|100|?|2.5|?|3.0|?|250.0|?|300.0|?|13.7500|?|563.7500|?|10102016

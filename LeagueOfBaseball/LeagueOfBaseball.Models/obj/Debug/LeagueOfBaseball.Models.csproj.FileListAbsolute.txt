@@ -1,0 +1,5 @@
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Models\bin\Debug\LeagueOfBaseball.Models.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Models\bin\Debug\LeagueOfBaseball.Models.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Models\obj\Debug\LeagueOfBaseball.Models.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Models\obj\Debug\LeagueOfBaseball.Models.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Models\obj\Debug\LeagueOfBaseball.Models.csprojResolveAssemblyReference.cache

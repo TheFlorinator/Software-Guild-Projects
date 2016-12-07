@@ -1,0 +1,24 @@
+﻿@model LeagueOfBaseball.Models.DTO.Player
+@{
+    ViewBag.Title = "DeletePlayer";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Delete Player</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(p => p.PlayerId)
+            @Html.HiddenFor(n => n.TeamName)
+            <p>Are you sure that you wish to delete @Html.DisplayFor(p => p.Name)?</p>
+            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+            @Html.ActionLink("Cancel", "GetAllTeams", "user", null, new { @class = "btn btn-sm btn-info" })
+        }
+    </div>
+</div>
+
+

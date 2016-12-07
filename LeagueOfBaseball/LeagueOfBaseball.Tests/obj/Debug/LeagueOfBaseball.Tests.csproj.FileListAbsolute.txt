@@ -1,0 +1,16 @@
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\bin\Debug\LeagueOfBaseball.Tests.dll.config
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\bin\Debug\LeagueOfBaseball.Tests.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\bin\Debug\LeagueOfBaseball.Tests.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\bin\Debug\LeagueOfBaseball.Logic.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\bin\Debug\LeagueOfBaseball.Models.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\bin\Debug\nunit.framework.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\bin\Debug\LeagueOfBaseball.Data.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\bin\Debug\LeagueOfBaseball.Logic.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\bin\Debug\LeagueOfBaseball.Models.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\bin\Debug\nunit.framework.xml
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\bin\Debug\LeagueOfBaseball.Data.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\obj\Debug\LeagueOfBaseball.Tests.csprojResolveAssemblyReference.cache
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\obj\Debug\LeagueOfBaseball.Tests.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\obj\Debug\LeagueOfBaseball.Tests.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\bin\Debug\Dapper.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Tests\bin\Debug\Dapper.xml

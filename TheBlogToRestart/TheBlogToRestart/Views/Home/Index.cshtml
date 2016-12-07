@@ -1,0 +1,463 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+
+<div class="container-fluid" id="firstDiv" style="margin-top:2em;margin-right:0;padding:0;float:initial">
+    <div class="row" style="margin-bottom: 15px;" id="menu">
+        <div class="row" style="margin-bottom:10px;">
+
+            <div class="col-xs-12 col-md-offset-9 col-md-3 transition slider" id="loadMoreDiv">
+                <button type="button" class="btn-lg moreBtns" id="loadMoreLink"><h4 style="color:white;vertical-align:central;">Recent</h4></button>                 
+               
+            </div>
+
+        </div>
+        <div class="row" style="margin-top:10px;">
+
+            <div class="col-xs-12 col-md-offset-9 col-md-3 transition slider">
+
+                <div class="input-group" id="searchDiv">
+                    <span class="input-group-addon glyphicon glyphicon-search" id="spanIcon"></span>
+                    <input type="text" class="form-control " placeholder="Search topic" aria-describedby="spanIcon" id="searchInput">
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-offset-9 col-md-3" id="moreBtnDiv">
+                <button type="button" class="btn-lg moreBtns" id="moreBtn"><h4 style="color:white;vertical-align:central;">More</h4></button>
+            </div>
+        </div>
+
+        <!--JS Load Most Recent-->
+        <div id="mostRecentContent">
+        </div>
+
+        <div style="color:white;" class="col-xs-12 col-md-offset-3 col-md-2 selections" data-tag="food" data-id="1" id="food">
+            <a href="#foodDiv" id="foodLink" data-tag="food"> <h2 style="color:white;">Food</h2> </a>
+        </div>
+
+
+        <div class="col-xs-12 col-md-offset-3 col-md-2 selections" id="wine">
+            <a href="#wineDiv" id="wineLink" data-tag="wine">
+                <h2 style="color:white;">Wine</h2>
+            </a>
+        </div>
+
+
+        <div class="col-xs-12 col-md-offset-3 col-md-2 selections" id="restaurants">
+            <a href="#restaurantsDiv" id="restaurantLink" data-tag="restaurants">
+                <h2 style="color:white;">Restaurants</h2>
+            </a>
+        </div>
+
+
+        <div class="col-xs-12 col-md-offset-3 col-md-2 selections" id="regions">
+            <a href="#regionsDiv" id="regionsLink" data-tag="regions">
+                <h2 style="color:white;">Regions</h2>
+            </a>
+        </div>
+
+
+        <div class="col-xs-12 col-md-offset-3 col-md-2 selections" id="beer">
+            <a href="#beerDiv" id="beerLink" data-tag="beer">
+                <h2 style="color:white;">Beer</h2>
+            </a>
+        </div>
+
+
+        <div class="col-xs-12 col-md-offset-3 col-md-2 selections" id="people">
+            <a href="#peopleDiv" id="peopleLink" data-tag="people">
+                <h2 style="color:white;">People</h2>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div id="featuredFour"></div><!---->
+</div>
+<div id="selectedPost" style="display:block;">
+    <!---->
+    <div class="row">
+        <div id="map" style="width:200px; height:200px; background-color:silver" class="hidden col-xs-12 col-md-offset-9 col-md-3"></div><!---->
+    </div>
+</div>
+<div id="expandDiv"></div><!---->
+<div id="bottomDiv"></div><!---->
+
+
+
+@section scripts {
+    <script type="text/template" id="tmpl">
+
+        <div class="col-xs-12 col-md-offset-3 col-md-4" id="mainImage">
+            <figure class="imghvr-fade img-rounded">
+                <img class="img-responsive top img-rounded gray" src="{{Image}}" alt="Hey there, good looking." />
+                <figcaption><h3 style="color:white;">Read More</h3></figcaption>
+                <a class="mainLink" href="#" data-id="{{PostId}}" id="mainFeatureLink">
+                </a>
+            </figure>
+
+
+            <div class="caption">
+                <h2>{{Title}}</h2>
+                <p class="date"><strong>{{PostDate}}</strong></p>
+                <p>{{Description}}</p>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="tmpl2">
+        <div class="col-lg-3 col-md-4 col-xs-12 thumb">
+            <a class="imagelink" href="#" data-id="{{PostId}}">
+                <figure class="imghvr-fade img-rounded">
+                    <img class="img-responsive img-rounded gray" src="{{Image}}" alt="">
+                    <figcaption><h3 style="color:white;">Read More</h3></figcaption>
+                </figure>
+            </a>
+            <div class="caption">
+                <h3>{{Title}}</h3>
+                <p class="date"><strong>{{PostDate}}</strong></p>
+                <p>{{Description}}</p>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="tmpl3">
+       
+            <a href="#" class="arrowClick">
+              
+                <div class="uparrow">
+                </div>
+            </a>
+                <div id="post">
+                    <div class="col-xs-12 col-md-9">
+                        <div style="display:flex;justify-content:center;align-items:center;">
+                            <h1>{{Title}}</h1>
+                        </div>
+                        <div id="postContent" class="row">
+                            <img class="img-responsive img-circle" src="{{Image}}" id="floatleft" />
+                            <p id="pshape">{{Content}}</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-3">
+                        <div id="author">Author</div>
+                        <h4>{{Author}}</h4>
+                        <div id="date">Date</div>
+                        <h4>{{PostDate}}</h4>
+                        <div id="#tags">#Tags</div>
+                        <h4>{{TagAsString}}</h4>
+                        <div>Location</div>
+                        <p>{{Address}}</p>
+                        @*<div id="map" style="width:200px; height:200px; background-color:silver"></div>*@
+                    </div>
+                </div>
+           
+       
+    </script>
+<script type="text/template" id="tmpl4">
+    <div class="col-lg-3 col-md-4 col-xs-12 thumb expandTwo">
+        <a class="imageExpandLink" href="#" data-id="{{PostId}}">
+            <figure class="imghvr-fade img-rounded">
+                <img class="img-responsive img-rounded gray" src="{{Image}}" alt="">
+                <figcaption><h3 style="color:white;">Read More</h3></figcaption>
+            </figure>
+        </a>
+        <div class="caption">
+            <h3>{{Title}}</h3>
+            <p class="date"><strong>{{PostDate}}</strong></p>
+            <p>{{Description}}</p>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="tmpl5">
+   
+        <a href="#" class="upArrowClick">
+            <div class="uparrow">
+            </div>
+        </a>
+        <div id="post">
+            <div class="col-xs-12 col-md-9">
+                <div style="display:flex;justify-content:center;align-items:center;">
+                    <h1>{{Title}}</h1>
+                </div>
+                <div id="postContent" class="row">
+                    <img class="img-responsive img-circle" src="{{Image}}" id="floatleft" />
+                    <p id="pshape">{{Content}}</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div id="author">Author</div>
+                <h4>{{Author}}</h4>
+                <div id="date">Date</div>
+                <h4>{{PostDate}}</h4>
+                <div id="#tags">#Tags</div>
+                <h4>{{TagAsString}}</h4>
+                <div>Location</div>
+                <p>{{Address}}</p>
+                @*<div id="map" style="width:200px; height:200px; background-color:silver"></div>*@
+            </div>
+        </div>
+    
+  
+    </script>
+    <script>
+        (function () {
+
+            var templates = {};
+
+            function merge(template, obj) {
+                if (!templates[template]) {
+                    templates[template] = $("#" + template).html();
+                }
+                var html = templates[template];
+                return html.replace(/{{(\w+)}}/gi, function (m, entry) {
+                    return obj[entry];
+                });
+            }
+
+            $.getJSON("/api/Blog/MostRecent")
+                .done(function (entry) {
+                    console.log(entry);
+                    var content = $("#mostRecentContent");
+                    content.append(merge("tmpl", entry));
+                })
+                .fail(function () {
+                    console.log("failed!");
+                });
+
+            $.getJSON("/api/Blog/All")
+                .done(function (entries) {
+                    var content = $("#featuredFour");
+                    entries.forEach(function (entry) {
+                        content.append(merge("tmpl2", entry))
+                    });
+                })
+                 .fail(function () {
+                     console.log("failed!");
+                 });
+            @*preprocess nested array*@
+            function loadEntry() {
+                var id = $(this).data('id');
+                $.getJSON("/api/Search/GetSnow/" + id)
+                .done(function (entry) {
+                    var content = $("#selectedPost").empty();
+                    entry.TagAsString = entry.Tags.map(function (elem) {
+                        return elem.HashTag;
+                    }).join();
+                    content.append(merge("tmpl3", entry));
+                })
+            };
+            window.loadEntry = loadEntry;
+            $("#featuredFour").on("click", ".imagelink", function () {
+                loadEntry.apply(this);
+                $("#map").removeClass("hidden");
+            });
+            $("#mostRecentContent").on("click", "#mainFeatureLink", function () {
+                loadEntry.apply(this);
+                $("#map").removeClass("hidden");
+                console.log("hello");
+            });
+            @*---------------------------------------------------*@
+            function loadCategory() {
+                var tag = $(this).data('tag');
+                console.log(tag)
+                $.getJSON('api/Search/GetZebra/', { "zebra": tag })
+                 .done(function (entries) {
+                     var content = $("#expandDiv").empty();
+                     $("#bottomDiv").empty();
+                     $("#selectedPost").empty();
+                     entries.forEach(function (entry) {
+                         content.append(merge("tmpl4", entry));
+                     });
+                 });
+            };
+
+            function search() {
+                var tag = $("#searchInput").val();
+                $.getJSON('api/Search/GetZebra/', { "zebra": tag })
+                 .done(function (entries) {
+                     var content = $("#selectedPost").empty();
+                     $("#expandDiv").empty();
+                     $("#bottomDiv").empty();
+                     entries.forEach(function (entry) {
+                         content.append(merge("tmpl2", entry));
+                     });
+                 }).fail(function (jqXHR, textStatus, errorThrown) {
+                     alert("fail!");
+                 })
+            };
+            function loadMore() {
+                $.getJSON("api/Search/GetZzzz")
+                 .done(function (entries) {
+                     var content = $("#expandDiv").empty();
+                     $("#bottomDiv").empty();
+                     entries.forEach(function (entry) {
+                         content.append(merge("tmpl4", entry));
+                     });
+                 }).fail(function (jqXHR, textStatus, errorThrown) {
+                     alert("fail!");
+                 })
+            };
+
+            $('#loadMoreDiv').on('click', '#loadMoreLink', function () {
+                loadMore();
+            });
+
+            $("#loadMoreDiv").click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#expandDiv").offset().top
+                }, 2000);
+            });
+
+
+
+            $("#searchInput").keypress(function (event) {
+                if (event.keyCode == 13)
+                    if (!event.shiftKey)
+                        search.apply(this);
+            });
+
+            $('#searchInput').keypress(function (event) {
+                if (event.keyCode == 13)
+                    if (!event.shiftKey)
+                        $('html, body').animate({
+                            scrollTop: $("#expandDiv").offset().top
+                        }, 2000);
+            });
+
+            $("#tagSearchDiv").on("click", ".imagelink", function () {
+                loadEntry.apply(this);
+            });
+            $("#tagSearchDiv").click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#selectedPost").offset().top
+                }, 2000);
+            });
+
+            window.loadCategory = loadCategory;
+
+            function loadPostToBottomDiv() {
+                var number = $(this).data('id');
+                console.log(number);
+                $.getJSON("/api/Search/GetSnow/" + number)
+                .done(function (entry) {
+                    var content = $("#bottomDiv").empty();
+                    entry.TagAsString = entry.Tags.map(function (elem) {
+                        return elem.HashTag;
+                    }).join();
+                    content.append(merge("tmpl3", entry));
+                })
+            };
+
+            $('#expandDiv').on('click', '.imageExpandLink', function () {
+                loadPostToBottomDiv.apply(this);
+            });
+
+            $('.expandTwoDiv').click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#bottomDiv").offset().top
+                }, 2000);
+            });
+
+            $("#food").on("click", "#foodLink", function () {
+                loadCategory.apply(this);
+            });
+            $("#wine").on("click", "#wineLink", function () {
+                loadCategory.apply(this);
+            });
+            $("#restaurants").on("click", "#restaurantLink", function () {
+                loadCategory.apply(this);
+            });
+            $("#regions").on("click", "#regionsLink", function () {
+                loadCategory.apply(this);
+            });
+            $("#beer").on("click", "#beerLink", function () {
+                loadCategory.apply(this);
+            });
+            $("#people").on("click", "#peopleLink", function () {
+                loadCategory.apply(this);
+            });
+            $("#about").on("click", "#aboutLink", function () { ///fix this to load post
+                loadCategory.apply(this);
+            });
+
+            $('.arrowClick').click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#firstDiv").offset().top
+                }, 2000);
+            });
+            $('.upArrowClick').click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#firstDiv").offset().top
+                }, 2000);
+            });
+            $('#mainImage').click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#selectedPost").offset().top
+                }, 2000);
+
+            });
+            $('#featuredFour').click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#selectedPost").offset().top
+                }, 2000);
+
+            });
+            $('.selections').click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#selectedPost").offset().top
+                }, 2000);
+
+            });
+            $('#selectedPost').click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#firstDiv").offset().top
+                }, 2000);
+            });
+           
+          
+
+
+
+
+            $('#moreBtn').on('click', function () {
+                $('.slider').toggleClass('open');
+
+            })
+
+            $("#moreBtnDiv").on('click', function () {
+                $("#moreBtn").fadeOut(function () {
+                    $("#moreBtn").text(($("#moreBtn").text() == 'More') ? 'Nevermind' : 'More').fadeIn();
+                })
+            })
+
+        })();
+    </script>
+
+    <script>
+        //marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png')
+        function myMap() {
+            var mapCanvas = document.getElementById("map");
+            var mapOptions = {
+                center: new google.maps.LatLng(44.977, -93.265), zoom: 11
+            };
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+            var uluru = { lat: 44.9757589, lng: -93.2727121 };
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+            //marker.setMap(map);
+
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaz4uwCsZadVlNwMr4E2fWeRA5n_7Jt0Q&callback=myMap"></script>
+
+}

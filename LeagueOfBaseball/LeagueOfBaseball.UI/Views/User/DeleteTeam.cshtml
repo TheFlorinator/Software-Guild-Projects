@@ -1,0 +1,22 @@
+﻿@model LeagueOfBaseball.Models.TeamResponse
+@{
+    ViewBag.Title = "DeleteTeam";
+}
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Delete Team</h3>
+        @Html.ActionLink("Return to Home", "GetAllTeams", "Users")
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(t => t.NewTeam)
+            <p>Are you sure that you wish to delete the team @Html.DisplayFor(t => t.NewTeam.Name)?</p>
+            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+            @Html.ActionLink("Cancel", "GetAllTeams", "Users", null, new { @class = "btn btn-sm btn-info" })
+        }
+    </div>
+</div>
+

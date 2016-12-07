@@ -1,0 +1,36 @@
+﻿@model ProtalOfLife.UI.Models.CategoryVM
+
+@{
+    ViewBag.Title = "ViewCategories";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Delete Categories</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table table-striped" style="width: auto;">
+            <thead>
+                <tr>
+                    <th>Categories</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var category in Model.CategoryList)
+                {
+                    <tr>
+                        <td>@category.Name</td>
+                        <td>
+                            @Html.ActionLink("Delete", "DeleteCategory", "Admin", new { categoryName = category.Name }, null)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

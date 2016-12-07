@@ -1,0 +1,132 @@
+﻿@model TheBlogToRestart.BlogVm
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+
+<form>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Title</label>
+        <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Enter Title">       
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Image</label>
+        <input type="text" class="form-control" id="image" placeholder="Password">
+    </div>
+    
+    <div class="form-group">
+        <label for="exampleTextarea">Address</label>
+        <input type="text" class="form-control" id="address" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputFile">Author</label>
+        <input type="text" class="form-control-file" id="author" aria-describedby="fileHelp">
+        <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+    </div>
+    <div class="form-group">
+        <label for="addy">Description</label>
+        <input type="text" class="form-control" id="description" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label for="exampleTextarea">Content</label>
+        <input type="text" class="form-control" id="content" placeholder="Password">
+    </div>    
+    <div class="form-group">
+        <label for="tags">Tags</label>
+        <input type="text" class="form-control" id="tags" placeholder="Password">
+    </div>
+
+   
+    <button type="submit" class="btn btn-primary" id="savePostBtn">Submit</button>
+</form>
+
+<div id="mostRecentContent"></div>
+
+@section scripts{
+    <script type="text/template" id="tmpl">
+    <div class="row">
+        <div id="post">
+            <div class="col-xs-12 col-md-9">
+                <div id="postTitle">
+                    <h2>{{Title}}</h2>
+                </div>
+                <div id="postContent" class="row">
+                    <div class="col-xs-12 col-md-3"><img class="img-responsive" src="{{Image}}"/></div>
+                    <div class="col-xs-12 col-md-6"><p>{{Content}}</p></div>
+
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div id="author">Author</div>
+                <h4>{{Author}}</h4>
+                <div id="#tags">#Tags</div>
+                <h4>{{Tags}}</h4>
+                <div>Location</div>
+                <p>{{Address}}</p>
+                <div id="map" style="width:200px; height:200px; background-color:silver"></div>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+    <script>
+        $(function () {
+            var templates = {};
+            function merge(template, obj) {
+                if (!templates[template]) {
+                    templates[template] = $("#" + template).html();
+                }
+                var html = templates[template];
+                return html.replace(/{{(\w+)}}/gi, function (m, entry) {
+                    return obj[entry];
+                });
+            }
+
+            $.getJSON("/api/Blog/All")
+         .done(function (entries) {
+             var content = $("#mostRecentContent");
+             entries.forEach(function (entry) {
+                 content.append(merge("tmpl", entry))
+             });
+
+         })
+          .fail(function (jqXhr, status, err) {
+              alert(status + '-' + err);
+              console.log("failed!");
+          });
+        });
+
+                $('#savePostBtn')
+                .click(function () {
+                
+                    var entry = {};                
+
+                    entry.Title = $('#title').val();
+                    entry.Image = $('#image').val();
+                    entry.Address = $('#address').val();
+                    entry.Author = $('#author').val();
+                    entry.Description = $('#description').val();
+                    entry.Content = $('#content').val();
+
+                    $.post('/api/Blog/Post', entry)
+                        .done(function () {
+                            console.log("saved!");
+                        })
+                        .fail(function (jqXhr, status, err) {
+                            alert(status + '-' + err);
+                            console.log("failed!");
+                        });
+                    return false;
+            });
+
+
+
+
+</script>
+
+}

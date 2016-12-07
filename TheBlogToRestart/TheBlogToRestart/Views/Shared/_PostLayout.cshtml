@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - PostLayout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap-journal.css" rel="stylesheet" />
+    
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    
+
+    @RenderSection("head", false)
+</head>
+<body>
+    <body style="margin:0;">
+        <div class="container" id="header">
+            <div class="navbar" style="position:absolute;z-index:5;">
+
+            </div>
+
+
+        </div>
+    </body>
+
+    <div class="container body-content">
+        @RenderBody()
+        <div class="container">
+            <div class="navbar-header">
+
+                @Html.ActionLink("Gastronome", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+                @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                {
+                   
+                    @Html.ActionLink("Write", "WritePost", "Post", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Logout", "Logout", "Account", new { area = "" }, new { @class = "navbar-brand" })
+
+                    if (HttpContext.Current.User.IsInRole("Admin"))
+                    {
+                        <ul class="nav navbar-left">
+                            @Html.ActionLink("Review Posts", "Review", "Post", new { area = "" }, new { @class = "navbar-brand" })
+                            @Html.ActionLink("Edit Posts", "Edit", "Post", new { area = "" }, new { @class = "navbar-brand" })
+                        </ul>                        
+                    }
+                    if (HttpContext.Current.User.IsInRole("Owner"))
+                    {
+                        <ul class="nav navbar-left">
+                            @Html.ActionLink("Review Posts", "Review", "Post", new { area = "" }, new { @class = "navbar-brand" })
+                            @Html.ActionLink("Edit Posts", "Edit", "Post", new { area = "" }, new { @class = "navbar-brand" })
+                        </ul>
+                        <ul class="nav navbar-right">
+                            @Html.ActionLink("Manage Users", "ManageRoles", "Account", new { area = "" }, new { @class = "navbar-brand" })
+                        </ul>
+                    }
+                }
+            </div>
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Game Of Scones</p>
+        </footer>
+    </div>
+   
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    @RenderSection("scripts", false)
+</body>
+</html>

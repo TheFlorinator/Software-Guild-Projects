@@ -1,0 +1,49 @@
+﻿@model LeagueOfBaseball.Models.DTO.Player
+@{
+    ViewBag.Title = "GetOnePlayer";
+}
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Player View</h3>
+        <div class="row">
+            @using (Html.BeginForm())
+            {
+                <div class="col-xs-12 col-sm-7">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Personal Details</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label>Player Name:</label>
+                                @Html.DisplayFor(p => p.Name)
+                            </div>
+                            <div class="form-group">
+                                <label>Team Name:</label>
+                                @Html.DisplayFor(p => p.TeamName)
+                            </div>
+                            <div class="form-group">
+                                <label>Position Played:</label>
+                                @Html.DisplayFor(p => p.PositionId)
+                            </div>
+                            <div class="form-group">
+                                <label>Jersey Number:</label>
+                                @Html.DisplayFor(p => p.JerseyNumber)
+                            </div>
+                            <div class="form-group">
+                                <label>Number of Years Played:</label>
+                                @Html.DisplayFor(p => p.NumberYearsPlayed)
+                            </div>
+                            <div class="form-group">
+                                <label>Batting Average:</label>
+                                @Html.DisplayFor(p => p.BattingAverage)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

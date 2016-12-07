@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynastyTomorrow.UI", "DynastyTomorrow\DynastyTomorrow.UI.csproj", "{E2E6F938-DE84-4B59-89B5-E00255C4DDE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynastyTomorrow.Tests", "DynastyTomorrow.Tests\DynastyTomorrow.Tests.csproj", "{FC9562A8-8F69-4B1B-9754-80F3EC331EB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynastyTomorrow.Models", "DynastyTomorrow.Models\DynastyTomorrow.Models.csproj", "{D9D6E291-A219-4631-AC48-F7FA420D94D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynastyTomorrow.Data", "DynastyTomorrow.Data\DynastyTomorrow.Data.csproj", "{D0171B59-BBC8-4FD8-A574-5A0C8F27B13E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynastyTomorrow.BLL", "DynastyTomorrow.BLL\DynastyTomorrow.BLL.csproj", "{EFA8370F-29FB-4BDF-B456-5D96ADE44E6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2E6F938-DE84-4B59-89B5-E00255C4DDE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2E6F938-DE84-4B59-89B5-E00255C4DDE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2E6F938-DE84-4B59-89B5-E00255C4DDE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2E6F938-DE84-4B59-89B5-E00255C4DDE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC9562A8-8F69-4B1B-9754-80F3EC331EB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC9562A8-8F69-4B1B-9754-80F3EC331EB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC9562A8-8F69-4B1B-9754-80F3EC331EB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC9562A8-8F69-4B1B-9754-80F3EC331EB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9D6E291-A219-4631-AC48-F7FA420D94D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9D6E291-A219-4631-AC48-F7FA420D94D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9D6E291-A219-4631-AC48-F7FA420D94D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9D6E291-A219-4631-AC48-F7FA420D94D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0171B59-BBC8-4FD8-A574-5A0C8F27B13E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0171B59-BBC8-4FD8-A574-5A0C8F27B13E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0171B59-BBC8-4FD8-A574-5A0C8F27B13E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0171B59-BBC8-4FD8-A574-5A0C8F27B13E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA8370F-29FB-4BDF-B456-5D96ADE44E6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA8370F-29FB-4BDF-B456-5D96ADE44E6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA8370F-29FB-4BDF-B456-5D96ADE44E6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA8370F-29FB-4BDF-B456-5D96ADE44E6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,27 @@
+﻿@model ProtalOfLife.Models.Data.Category
+@{
+    ViewBag.Title = "AddCategory";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Add Category</h3>
+        
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <div class="form-group">
+                @Html.TextBoxFor(c => c.Name, new { @class = "form-control", placeholder = "Category" })
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>
+            <button type="submit" class="btn btn-md btn-primary">Save</button>
+            @Html.ActionLink("Cancel", "ManagePolicies", "Admin", null, new { @class = "btn btn-md btn-danger"})
+        }
+    </div>
+</div>
+
+

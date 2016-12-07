@@ -1,0 +1,50 @@
+﻿@model ProtalOfLife.UI.Models.CategoryVM
+@{
+    ViewBag.Title = "Categories";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>View Policies</h3>
+    </div>
+    <div class="col-xs-12">
+        <div class="row">
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+                    <label>Categories:</label>
+                    @Html.DropDownList("categoryId", Model.CategoryList.Select(m => new SelectListItem { Text = m.Name, Value = m.Id.ToString() }), "-Choose One-", new { @class = "form-control" })
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            }
+            @if (Model.Category != null)
+            {
+                <div class="col-xs-12">
+                    <table id="myTable" class="table table-striped" style="width: auto">
+                        <thead>
+                            <tr>
+                                <th>Policies</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var policy in Model.Category.Policies)
+                            {
+                                <tr>
+                                    <td>@Html.ActionLink(policy.Name, "Policy", "Admin", new { id = policy.Name, reference = "categories" }, null)</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        document.getElementById("Categories").addEventListener("change", function () {
+
+        });
+    </script>
+}

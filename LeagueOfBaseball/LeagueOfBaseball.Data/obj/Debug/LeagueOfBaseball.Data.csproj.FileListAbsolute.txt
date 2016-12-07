@@ -1,0 +1,9 @@
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Data\bin\Debug\LeagueOfBaseball.Data.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Data\bin\Debug\LeagueOfBaseball.Data.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Data\bin\Debug\LeagueOfBaseball.Models.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Data\bin\Debug\LeagueOfBaseball.Models.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Data\obj\Debug\LeagueOfBaseball.Data.csprojResolveAssemblyReference.cache
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Data\obj\Debug\LeagueOfBaseball.Data.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Data\obj\Debug\LeagueOfBaseball.Data.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Data\bin\Debug\Dapper.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\LeagueOfBaseball\LeagueOfBaseball.Data\bin\Debug\Dapper.xml

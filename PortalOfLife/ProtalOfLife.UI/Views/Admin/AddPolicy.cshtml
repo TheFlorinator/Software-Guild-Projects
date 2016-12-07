@@ -1,0 +1,43 @@
+﻿@model ProtalOfLife.Models.Data.Policy
+
+@{
+    ViewBag.Title = "AddPolicy";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Add Policy</h3>
+        <div class="row">
+            @using (Html.BeginForm())
+            {
+                <fieldset>
+                    @Html.ValidationSummary(true)
+                    <div class="col-xs-12 col-sm-7">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Add Policy</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label>Policy Name:</label>
+                                    @Html.TextBoxFor(p => p.Name, new { @class = "form-control", placeHolder = "Name" })
+                                    @Html.ValidationMessageFor(model => model.Name)
+                                </div>
+                                <div class="form-group">
+                                    <label>Content:</label>
+                                    @Html.TextAreaFor(p => p.Content, new { @class = "form-control", placeHolder = "Content", @rows = 25 })
+                                    @Html.ValidationMessageFor(model => model.Content)
+                                </div>
+                                <button class="btn btn-primary">Save</button>
+                                @Html.ActionLink("Canel", "ManagePolicies", "Admin", null, new { @class = "btn btn-md btn-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            }
+        </div>
+    </div>
+</div>
+
+
+

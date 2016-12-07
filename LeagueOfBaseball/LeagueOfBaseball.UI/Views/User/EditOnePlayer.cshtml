@@ -1,0 +1,53 @@
+﻿@model LeagueOfBaseball.UI.Models.PlayerVM
+@{
+    ViewBag.Title = "EditOnePlayer";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Edit Player</h3>
+        <div class="row">
+            @using (Html.BeginForm())
+            {
+                @Html.HiddenFor(model => model.Player.PlayerId)
+                <div class="col-xs-12 col-sm-7">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Player Information</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label>Name:</label>
+                                @Html.TextBoxFor(p => p.Player.Name, new { @class = "form-control", placeholder = "Player" })
+                            </div>
+                            <div class="form-group">
+                                <label>Teams:</label>
+                                @Html.DropDownListFor(p => p.Player.TeamName, Model.TeamList, "-Choose One-", new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <label>Position:</label>
+                                @Html.EnumDropDownListFor(p => p.Player.PositionId, "-Select Position-", new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <label>Jersey Number:</label>
+                                @Html.TextBoxFor(p => p.Player.JerseyNumber, new { @class = "form-control", placeholder = "Player" })
+                            </div>
+                            <div class="form-group">
+                                <label>Numbers of years played:</label>
+                                @Html.TextBoxFor(p => p.Player.NumberYearsPlayed, new { @class = "form-control", placeholder = "Player" })
+                            </div>
+                            <div class="form-group">
+                                <label>Batting average:</label>
+                                @Html.TextBoxFor(p => p.Player.BattingAverage, new { @class = "form-control", placeholder = "Player" })
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+

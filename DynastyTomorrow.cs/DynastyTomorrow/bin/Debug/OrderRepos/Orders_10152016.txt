@@ -1,0 +1,2 @@
+OrderNumber|?|CustomerName|?|State|?|TaxRate|?|ProductType|?|Area|?|CostPerSquareFoot|?|LaborCostPerSquareFoot|?|MaterialCost|?|LaborCost|?|Tax|?|Total|?|Date
+1|?|Katie|?|ND|?|2.5|?|LAMINATE|?|134|?|2.5|?|3.0|?|335.0|?|402.0|?|18.4250|?|755.4250|?|10152016

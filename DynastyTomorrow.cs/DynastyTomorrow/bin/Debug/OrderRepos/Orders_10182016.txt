@@ -1,0 +1,2 @@
+OrderNumber|?|CustomerName|?|State|?|TaxRate|?|ProductType|?|Area|?|CostPerSquareFoot|?|LaborCostPerSquareFoot|?|MaterialCost|?|LaborCost|?|Tax|?|Total|?|Date
+1|?|JasonTheGreat|?|WI|?|2.5|?|WOOD|?|100|?|11.2|?|5.9|?|1120.0|?|590.0|?|42.7500|?|1752.7500|?|10182016

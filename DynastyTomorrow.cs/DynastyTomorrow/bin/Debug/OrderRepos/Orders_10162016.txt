@@ -1,0 +1,3 @@
+OrderNumber|?|CustomerName|?|State|?|TaxRate|?|ProductType|?|Area|?|CostPerSquareFoot|?|LaborCostPerSquareFoot|?|MaterialCost|?|LaborCost|?|Tax|?|Total|?|Date
+1|?|JasonTheGreat|?|WA|?|2.5|?|WOOD|?|2785|?|11.2|?|5.9|?|31192.0|?|16431.5|?|1190.5875|?|48814.0875|?|10162016
+2|?|TesterTest|?|CO|?|1.0|?|TILE|?|1000|?|3.0|?|4.9|?|500|?|700|?|250|?|7000|?|10162016

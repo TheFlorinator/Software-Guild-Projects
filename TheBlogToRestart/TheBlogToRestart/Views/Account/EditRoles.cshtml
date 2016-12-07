@@ -1,0 +1,54 @@
+﻿@model TheBlogToRestart.Models.UserView
+@{
+    Layout = "~/Views/Shared/_ManageLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12 col-sm-3">
+    </div>
+    <div class="col-xs-12 col-sm-9">
+        <h3>Edit Roles</h3>
+    </div>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(u => u.User.Id)
+    <div class="col-xs-12">
+        <div>
+            <table id="mytable" class="table table-striped" style="width: auto">
+                <thead>
+                    <tr>
+                        <th>Users</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>
+                                <b>Current Role:</b>
+                                @foreach (var role in Model.User.Roles)
+                                {
+                                    foreach (var currentRole in Model.CurrentRole)
+                                    {
+                                        if (role.RoleId == currentRole.Id)
+                                        {
+                                            @currentRole.Name
+                                        }
+                                    }
+                                }
+                            </td>
+                            <td><b>New Role:</b> @Html.DropDownListFor(r => r.Role, Model.Roles, "-Choose One-")</td>
+                        </tr>
+                </tbody>
+            </table>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <input type="submit" class="btn btn-default" value="Save" />
+                    @Html.ActionLink("Cancel", "ManageRoles", null, new { @class = "btn btn-md btn-danger" })
+                </div>
+            </div>
+        </div>
+
+    </div>
+}

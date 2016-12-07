@@ -1,0 +1,41 @@
+﻿@model  IEnumerable<TheBlogToRestart.Models.Post>
+@{
+    ViewBag.Title = "Publish";
+    Layout = "~/Views/Shared/_PostLayout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 ">
+        <h3>Unpublished Posts</h3>
+    </div>
+</div>
+<div id="unpublished">
+    <div class="row">
+        <div class="col-xs-12">
+            <table id="myTable" class="table table-striped" style="width: auto;">
+                <thead>
+                    <tr>
+                        <th>PostId</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Description</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                        @foreach (var post in Model)
+                        {
+                            <tr>
+                                <td>@post.PostId</td>
+                                <td>@post.Title</td>
+                                <td>@post.Author</td>
+                                <td>@post.Description</td>
+                                <td>
+                                    @Html.ActionLink("Details","Publish", "Post", new { id = post.PostId}, null)
+                                </td>
+                            </tr>
+                        }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

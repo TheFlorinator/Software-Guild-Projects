@@ -1,0 +1,41 @@
+﻿@model  IEnumerable<TheBlogToRestart.Models.Post>
+@{
+    ViewBag.Title = "AboutUs";
+    Layout = "~/Views/Shared/_PostLayout.cshtml";
+}
+
+@section head{
+    <link href="~/Content/BlogScript.css" rel="stylesheet" />
+}
+
+
+<h3>Contributers</h3>
+<br />
+
+
+<div class="row">
+<div class="col-xs-12">
+    @using (Html.BeginForm())
+    {
+        foreach (var post in Model)
+        {
+             <div class= "col-xs-12 col-sm-6" >
+            <div class="card">
+                <img src="@post.Image" alt="Writer Extraordinaire"
+                     style="width:100%" />
+
+                <div>@post.Title</div>
+                <br />
+                <p>@post.Content</p>
+            </div>
+                 <br /><br />
+            </div>
+
+        }
+        <br /><br />
+    }
+</div>
+    <br /><br />
+
+</div>
+

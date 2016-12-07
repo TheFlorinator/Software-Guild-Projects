@@ -1,0 +1,20 @@
+﻿@model ProtalOfLife.Models.Data.Policy
+@{
+    ViewBag.Title = "DeletePolicy";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Delete Policy</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        @using (Html.BeginForm())
+        {
+            <p>Are you sure that you wish to delete the @Html.DisplayFor(p => p.Name) policy?</p>
+            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+            @Html.ActionLink("Cancel", "ManagePolicies", "Admin", new { name = Model.Name }, new { @class = "btn btn-sm btn-info" })
+        }
+    </div>
+</div>

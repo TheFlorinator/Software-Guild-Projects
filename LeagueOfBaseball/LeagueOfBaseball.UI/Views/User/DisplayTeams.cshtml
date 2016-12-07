@@ -1,0 +1,34 @@
+﻿@model LeagueOfBaseball.UI.Models.TeamsVM
+@{
+    ViewBag.Title = "DisplayTeams";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Delete Teams</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table table-striped" style="width: auto;">
+            <thead>
+                <tr>
+                    <th>Categories</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Team in Model.TeamList)
+                {
+                    <tr>
+                        <td>@Team.Name</td>
+                        <td>
+                            @Html.ActionLink("Delete", "DeleteTeam", "User", new { name = Team.Name }, new { @class = "btn btn-sm btn-info" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

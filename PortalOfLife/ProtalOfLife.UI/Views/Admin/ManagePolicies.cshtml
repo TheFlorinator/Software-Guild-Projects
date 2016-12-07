@@ -1,0 +1,59 @@
+﻿@model ProtalOfLife.UI.Models.CategoryVM
+@{
+    ViewBag.Title = "Categories";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Manage Policies</h3>
+    </div>
+    <div class="col-xs-12">
+        <div class="row">
+            @using (Html.BeginForm())
+            {
+                @*@Html.HiddenFor(c => c.Category.Policies.Select(p => p.Name))*@
+                <div class="form-group">
+                    <label>Categories:</label>
+                    @Html.DropDownList("categoryId", Model.CategoryList.Select(m => new SelectListItem { Text = m.Name, Value = m.Id.ToString() }), "-Choose One-", new { @class = "form-control" })
+                    <button type="submit" value="add" id="add" class="btn btn-danger">Add Policies</button>
+                </div>
+                <button type="submit" class="btn btn-primary">Search Policies</button>
+                @Html.ActionLink("Add Category", "AddCategory", "Admin", null, new { @class = "btn btn-md btn-warning" })
+
+            }
+            @if (Model.Category != null)
+            {
+                <div class="col-xs-12">
+                    <table id="myTable" class="table table-striped" style="width: auto">
+                        <thead>
+                            <tr>
+                                <th>Policies</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var policy in Model.Category.Policies)
+                {
+                                <tr>
+                                    <td>@Html.ActionLink(policy.Name, "Policy", "Admin", new { id = policy.Name }, null)</td>
+                                    <td>| @Html.ActionLink("Delete", "DeletePolicy", "Admin", new { name = policy.Name }, null)</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        $(function () {
+            $('#add').click(function () {
+                $('form').attr('action', '/Admin/AddPolicy').attr('method', 'get');
+            });
+        });
+    </script>
+}
+
+

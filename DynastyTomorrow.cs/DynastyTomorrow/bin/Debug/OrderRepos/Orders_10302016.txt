@@ -1,0 +1,2 @@
+OrderNumber|?|CustomerName|?|State|?|TaxRate|?|ProductType|?|Area|?|CostPerSquareFoot|?|LaborCostPerSquareFoot|?|MaterialCost|?|LaborCost|?|Tax|?|Total
+1|?|TesterTest|?|CO|?|1.0|?|TILE|?|1000|?|3.0|?|4.9|?|500|?|700|?|250|?|7000|?|10302016

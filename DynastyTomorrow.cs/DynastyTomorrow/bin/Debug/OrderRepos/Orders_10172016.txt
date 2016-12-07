@@ -1,0 +1,2 @@
+OrderNumber|?|CustomerName|?|State|?|TaxRate|?|ProductType|?|Area|?|CostPerSquareFoot|?|LaborCostPerSquareFoot|?|MaterialCost|?|LaborCost|?|Tax|?|Total|?|Date
+1|?|Heidi|?|CA|?|2.5|?|WOOD|?|145|?|11.2|?|5.9|?|1624.0|?|855.5|?|61.9875|?|2541.4875|?|10172016

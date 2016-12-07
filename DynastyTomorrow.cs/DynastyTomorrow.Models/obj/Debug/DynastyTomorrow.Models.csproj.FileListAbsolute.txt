@@ -1,0 +1,5 @@
+C:\src\softwareGuild\repos\jason-florin-individual-work\DynastyTomorrow.cs\DynastyTomorrow.Models\bin\Debug\DynastyTomorrow.Models.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\DynastyTomorrow.cs\DynastyTomorrow.Models\bin\Debug\DynastyTomorrow.Models.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\DynastyTomorrow.cs\DynastyTomorrow.Models\obj\Debug\DynastyTomorrow.Models.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\DynastyTomorrow.cs\DynastyTomorrow.Models\obj\Debug\DynastyTomorrow.Models.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\DynastyTomorrow.cs\DynastyTomorrow.Models\obj\Debug\DynastyTomorrow.Models.csprojResolveAssemblyReference.cache

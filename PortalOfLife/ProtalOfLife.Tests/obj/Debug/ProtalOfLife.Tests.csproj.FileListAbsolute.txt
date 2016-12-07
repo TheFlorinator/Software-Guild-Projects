@@ -1,0 +1,14 @@
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\ProtalOfLife.Tests\bin\Debug\ProtalOfLife.Tests.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\ProtalOfLife.Tests\bin\Debug\ProtalOfLife.Tests.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\ProtalOfLife.Tests\bin\Debug\Logic.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\ProtalOfLife.Tests\bin\Debug\Models.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\ProtalOfLife.Tests\bin\Debug\nunit.framework.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\ProtalOfLife.Tests\bin\Debug\Data.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\ProtalOfLife.Tests\bin\Debug\Logic.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\ProtalOfLife.Tests\bin\Debug\Models.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\ProtalOfLife.Tests\bin\Debug\nunit.framework.xml
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\ProtalOfLife.Tests\bin\Debug\Data.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\ProtalOfLife.Tests\obj\Debug\ProtalOfLife.Tests.csprojResolveAssemblyReference.cache
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\ProtalOfLife.Tests\obj\Debug\ProtalOfLife.Tests.dll
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\ProtalOfLife.Tests\obj\Debug\ProtalOfLife.Tests.pdb
+C:\src\softwareGuild\repos\jason-florin-individual-work\PortalOfLife\ProtalOfLife.Tests\bin\Debug\ProtalOfLife.Tests.dll.config

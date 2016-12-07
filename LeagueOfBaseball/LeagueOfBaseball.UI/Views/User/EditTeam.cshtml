@@ -1,0 +1,40 @@
+﻿@model LeagueOfBaseball.UI.Models.TeamsVM
+@{
+    ViewBag.Title = "EditTeam";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Edit Team</h3>
+        <div class="row">
+            @using (Html.BeginForm())
+            {
+                <fieldset>
+                    @Html.HiddenFor(t => t.Team.TeamId)
+                    @Html.ValidationSummary(true)
+                    <div class="col-xs-12 col-sm-7">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Team Information</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label>Name:</label>
+                                    @Html.TextBoxFor(t => t.Team.Name, new { @class = "form-control", placeholder = $"{Model.Team.Name}" })
+                                    @Html.ValidationMessageFor(model => model.Team.Name)
+                                </div>
+                                <div class="form-group">
+                                    <label>Teams:</label>
+                                    @*@Html.DropDownListFor(t => t.Team.Name, Model.SelectPlayerList, "-Manager-", new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.SelectPlayerList)*@
+                                </div>
+                                <button type="submit" class="btn btn-sm btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            }
+        </div>
+    </div>
+</div>
+
