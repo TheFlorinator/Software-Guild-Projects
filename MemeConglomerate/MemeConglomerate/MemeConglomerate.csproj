@@ -171,7 +171,6 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\mustache.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\Home\Home.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +200,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MemeConglomerate.Logic\MemeConglomerate.Logic.csproj">

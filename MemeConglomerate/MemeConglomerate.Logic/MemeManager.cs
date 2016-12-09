@@ -33,7 +33,7 @@ namespace MemeConglomerate.Logic
         public Response<Meme> AddMeme(Meme meme)
         {
             Response<Meme> response = new Response<Meme>();
-            if (string.IsNullOrWhiteSpace(meme.Title) || string.IsNullOrWhiteSpace(meme.Description) || string.IsNullOrWhiteSpace(meme.URL))
+            if (string.IsNullOrWhiteSpace(meme.Title) || string.IsNullOrWhiteSpace(meme.Description) || string.IsNullOrWhiteSpace(meme.URL) || string.IsNullOrWhiteSpace(meme.Genre.Name))
             {
                 response.Success = false;
                 response.Message = "All fields must be filled in";

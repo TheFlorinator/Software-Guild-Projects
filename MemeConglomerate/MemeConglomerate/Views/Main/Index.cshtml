@@ -12,12 +12,11 @@
                 <a href="#" class="genreChoice">See All</a>
             </li>
             @foreach (var genre in Model.SelectedGenres)
-             {
+            {
                 <li>
                     <a href="#" class="genreChoice">@genre.Text</a>
                 </li>
-
-             }
+            }
         </ul>
     </li>
 
@@ -59,29 +58,10 @@
     </div>
 </div>
 
-<div class="modal fade" id="addGenreModal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title">Add Genre</h4>
-            </div>
-            <div class="modal-body">
-                <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 
 @section scripts {
     <script type="text/template" id="meme">
-        <div class="col-lg-4 col-md-6 col-xs-12 meme" style="max-height:500px;">
+        <div class="col-lg-4 col-md-4 col-xs-12 meme" style="max-height:500px;">
             <div class="panel panel-success">
                 <div class="panel-heading">
                     <h4 class="panel-title">{{Title}}</h4>
@@ -152,38 +132,36 @@
                 $(this).find('form').val('')[0].reset();
             });
 
-            $('.genreChoice')[0].click(function () {
-                var genre = $('.genreChoice').val();
+            $('.genreChoice').click(function () {
+                var genre = $(this).text();
                 $.getJSON('/api/home/Search/', { genre })
                     .then(function (results) {
                         var content = $('.meme').remove();
-                        if (results == null) {
-                            window.loadMemes();
+                        if (genre == 'See All') {
+                            loadMemes();
                         }
                         else {
                             render(results)
                             console.log(results);
                         }
-
-                    });
+                 });
             });
-           
+
             $('#saveBtn')
             .click(function (event) {
                 var meme = {}
                 meme.Title = $('#title').val();
                 meme.Description = $('#description').val();
                 meme.URL = $('#url').val();
-                meme.Genre = $('#genre').val();
-                console.log(meme);
+                var name = $('#genres option:selected').text()
+                meme.Genre = { Name: name };
                 $.post('/api/Home/Post/', meme)
                     .then(function (result) {
                         addNewMemeToDom(result);
                         console.log("saved");
-                        $('#addMemeModal').modal('hide');
+                        //$('#addMemeModal').modal('hide');
                     });
+                });
             });
-        });
-
     </script>
 }

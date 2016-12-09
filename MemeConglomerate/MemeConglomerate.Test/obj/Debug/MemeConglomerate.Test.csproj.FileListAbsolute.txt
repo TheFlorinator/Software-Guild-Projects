@@ -12,3 +12,17 @@ C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Test
 C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Test\obj\Debug\MemeConglomerate.Test.dll
 C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Test\obj\Debug\MemeConglomerate.Test.pdb
 C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Test\bin\Debug\MemeConglomerate.Test.dll.config
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Test\bin\Debug\MemeConglomerate.Test.dll.config
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Test\bin\Debug\MemeConglomerate.Test.dll
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Test\bin\Debug\MemeConglomerate.Test.pdb
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Test\bin\Debug\MemeConglomerate.Logic.dll
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Test\bin\Debug\MemeConglomerate.Model.dll
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Test\bin\Debug\nunit.framework.dll
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Test\bin\Debug\MemeConglomerate.Data.dll
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Test\bin\Debug\MemeConglomerate.Logic.pdb
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Test\bin\Debug\MemeConglomerate.Model.pdb
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Test\bin\Debug\nunit.framework.xml
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Test\bin\Debug\MemeConglomerate.Data.pdb
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Test\obj\Debug\MemeConglomerate.Test.csprojResolveAssemblyReference.cache
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Test\obj\Debug\MemeConglomerate.Test.dll
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Test\obj\Debug\MemeConglomerate.Test.pdb

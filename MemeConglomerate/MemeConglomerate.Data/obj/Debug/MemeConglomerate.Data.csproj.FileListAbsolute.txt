@@ -5,3 +5,10 @@ C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Data
 C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Data\obj\Debug\MemeConglomerate.Data.csprojResolveAssemblyReference.cache
 C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Data\obj\Debug\MemeConglomerate.Data.dll
 C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Data\obj\Debug\MemeConglomerate.Data.pdb
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Data\bin\Debug\MemeConglomerate.Data.dll
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Data\bin\Debug\MemeConglomerate.Data.pdb
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Data\bin\Debug\MemeConglomerate.Model.dll
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Data\bin\Debug\MemeConglomerate.Model.pdb
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Data\obj\Debug\MemeConglomerate.Data.csprojResolveAssemblyReference.cache
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Data\obj\Debug\MemeConglomerate.Data.dll
+C:\src\softwareGuild\repos\Software-Guild-Projects\MemeConglomerate\MemeConglomerate.Data\obj\Debug\MemeConglomerate.Data.pdb

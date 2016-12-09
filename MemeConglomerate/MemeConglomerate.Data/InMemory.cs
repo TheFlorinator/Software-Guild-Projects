@@ -25,9 +25,9 @@ namespace MemeConglomerate.Data
             var memeTwo = new Meme()
             {
                 Id = 2,
-                Title = "It's FRIDAY!!!",
-                Description = "What it feels like to leave work on Friday",
-                URL = "http://i.qkme.me/6v24.jpg",  
+                Title = "Leaving Work!!!",
+                Description = "The feeling of leaving after a long day.",
+                URL = "http://nowaygirl.com/wp-content/uploads/2015/07/xleaving-work-on-friday-like-06-550x550.jpg.pagespeed.ic.bdHHlQSnRP.jpg",  
                 Genre = new Genre() { Id = 3, Name = "Work" },
             };
 
@@ -43,18 +43,18 @@ namespace MemeConglomerate.Data
             var memeFour = new Meme()
             {
                 Id = 4,
-                Title = "All things Steak!",
-                Description = "Ron Swanson being Ron Swanson, ordering courses all of which are steak!",
-                URL = "https://cdn.pastemagazine.com/www/system/images/photo_albums/ron-swanson-memes/large/memes-rs-5-course-dinner.jpg?1384968217",
+                Title = "Losing Stinks...",
+                Description = "Ron Swanson being Ron Swanson, describing the pains of losing",
+                URL = "https://coxrare.files.wordpress.com/2013/11/screen-shot-2013-11-15-at-9-13-13-am.png?w=485&h=284&crop=1",
                 Genre = new Genre() { Id = 1, Name = "Ron Swanson" },
             };
 
             var memeFive = new Meme()
             {
                 Id = 5,
-                Title = "Leaving Work!",
-                Description = "What it feels like to leave work on Friday",
-                URL = "http://i.qkme.me/6v24.jpg",
+                Title = "Fighting for the finish",
+                Description = "What it feels like to push through to the end of a shift",
+                URL = "https://s-media-cache-ak0.pinimg.com/736x/ae/eb/b3/aeebb383d1cb73d68369c62920c4ca65.jpg",
                 Genre = new Genre() { Id = 3, Name = "Work" },
             };
 
@@ -66,12 +66,33 @@ namespace MemeConglomerate.Data
                 URL = "https://www.askideas.com/media/48/Cat-Funny-Safety-Meme-Picture.jpg",
                 Genre = new Genre() { Id = 2, Name = "Cats" },
             };
+
+            var memeSeven = new Meme()
+            {
+                Id = 7,
+                Title = "Just drink chocolate milk",
+                Description = "Ron Swansons thoughts on lying",
+                URL = "http://www.funniestmemes.com/wp-content/uploads/2014/10/Funniest_Memes_ron-swanson-speaking-the-truth_19312.jpeg",
+                Genre = new Genre() { Id = 1, Name = "Ron Swanson" },
+            };
+
+            var memeEight = new Meme()
+            {
+                Id = 8,
+                Title = "KICKBALL TIIME!",
+                Description = "The joys and excitement of kickball.",
+                URL = "http://getbettertoday.com/wp-content/uploads/2014/05/10.png",
+                Genre = new Genre() { Id = 4, Name = "Sports" },
+            };
+
             _memes.Add(memeOne);
             _memes.Add(memeTwo);
             _memes.Add(memeThree);
             _memes.Add(memeFour);
             _memes.Add(memeFive);
             _memes.Add(memeSix);
+            _memes.Add(memeSeven);
+            _memes.Add(memeEight);
         }
         public void Add(Meme meme)
         {

@@ -17,7 +17,7 @@ namespace MemeConglomerate.Test
         {
             MemeManager manager = new MemeManager();
             var allMemes = manager.GetAllMemes();
-            Assert.AreEqual(6, allMemes.Count());
+            Assert.AreEqual(8, allMemes.Count());
         }
 
         [TestCase("A title", "SomeURL", "A Description", "A cool genre", true)]
