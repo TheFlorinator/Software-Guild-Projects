@@ -1,0 +1,189 @@
+﻿@model MemeConglomerate.Models.GenreView
+@{
+    ViewBag.Titel = "Index";
+}
+@section nav
+{
+
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Genres <span class="caret"></span></a>
+        <ul class="dropdown-menu" id="genresSelectItems">
+            <li>
+                <a href="#" class="genreChoice">See All</a>
+            </li>
+            @foreach (var genre in Model.SelectedGenres)
+             {
+                <li>
+                    <a href="#" class="genreChoice">@genre.Text</a>
+                </li>
+
+             }
+        </ul>
+    </li>
+
+}
+<div id="mainPage" style="display:block">
+
+</div>
+
+<div class="modal fade" id="addMemeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add Meme</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <lable>Title</lable>
+                    @Html.TextBoxFor(m => m.Meme.Title, new { @class = "form-control", id = "title" })
+                </div>
+                <div class="form-group">
+                    <lable>Description</lable>
+                    @Html.TextBoxFor(m => m.Meme.Description, new { @class = "form-control", id = "description" })
+                </div>
+                <div class="form-group">
+                    <lable>Image URL</lable>
+                    @Html.TextBoxFor(m => m.Meme.URL, new { @class = "form-control", id = "url" })
+                </div>
+                <div class="form-group">
+                    <lable>Genre</lable>
+                    @Html.DropDownListFor(m => m.Meme.Genre, Model.SelectedGenres, "-Choose Genre-", new { @class = "form-control", id = "genres" })
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveBtn">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addGenreModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Add Genre</h4>
+            </div>
+            <div class="modal-body">
+                <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+@section scripts {
+    <script type="text/template" id="meme">
+        <div class="col-lg-4 col-md-6 col-xs-12 meme" style="max-height:500px;">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h4 class="panel-title">{{Title}}</h4>
+                </div>
+                <div class="panel-body">
+                    <img class="img-responsive" src={{URL}} style="height:auto; min-width:100% ;margin-right:auto;" />
+                    <div class="form-group">
+                        <label>Genre:</label>
+                        {{Genre.Name}}
+                    </div>
+                    <div class="form-group">
+                        <label>Description:</label>
+                        {{Description}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var templates = {};
+
+            var render = function (memes) {
+                memes.map(function (meme, i) {
+                    addMeme(meme, i);
+                })
+            };
+
+            var addNewMemeToDom = function (meme) {
+                addMeme(meme, $('.meme').length, $('#mainPage .row:last'))
+            };
+
+            var addMeme = function (meme, i) {
+                var row;
+                if (i % 3 == 0) {
+                    row = $('<div class="row"></div>')
+                    $('#mainPage').append(row);
+                }
+                else {
+                    row = $('#mainPage .row:last');
+                }
+                var item = Mustache.to_html($('#meme').html(), meme);
+                row.append(item);
+            };
+
+            var loadAllGenre = function () {
+                $.getJSON('/api/home/AllGenres')
+                .then(function (storedGenres) {
+                    console.log(storedGenres)
+                });
+            };
+
+            var loadMemes = function () {
+                $.getJSON('/api/home/AllMemes')
+                .then(function (storedMemes) {
+                    console.log(storedMemes)
+                    render(storedMemes);
+                });
+            }
+
+            window.loadMemes = loadMemes();
+            loadAllGenre();
+
+            //still needs work
+            $('#saveBtn').on('hidden.bs.modal', function () {
+                $(this).find('form').val('')[0].reset();
+            });
+
+            $('.genreChoice')[0].click(function () {
+                var genre = $('.genreChoice').val();
+                $.getJSON('/api/home/Search/', { genre })
+                    .then(function (results) {
+                        var content = $('.meme').remove();
+                        if (results == null) {
+                            window.loadMemes();
+                        }
+                        else {
+                            render(results)
+                            console.log(results);
+                        }
+
+                    });
+            });
+           
+            $('#saveBtn')
+            .click(function (event) {
+                var meme = {}
+                meme.Title = $('#title').val();
+                meme.Description = $('#description').val();
+                meme.URL = $('#url').val();
+                meme.Genre = $('#genre').val();
+                console.log(meme);
+                $.post('/api/Home/Post/', meme)
+                    .then(function (result) {
+                        addNewMemeToDom(result);
+                        console.log("saved");
+                        $('#addMemeModal').modal('hide');
+                    });
+            });
+        });
+
+    </script>
+}

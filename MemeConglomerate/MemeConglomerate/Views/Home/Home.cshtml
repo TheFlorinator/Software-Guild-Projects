@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+@section scripts {
+    <script type="text/template" id="home">
+
+        <div class="box">
+            <h2>{{Title}}</h2>
+            <p>{{Description}}</p>
+            <img class="img-responsive" src="{{Image}}" alt="Hhmmm..."/>
+            <p>{{GenreAsString}}</p>
+        </div>
+    </script>
+     
+    $.getJSON("/api/Home/AllMemes")
+    .done(function (meme){
+    console.log(meme)
+    })
+    
+    
+    }

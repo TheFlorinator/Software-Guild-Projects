@@ -1,0 +1,9 @@
+C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Logic\bin\Debug\MemeConglomerate.Logic.dll
+C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Logic\bin\Debug\MemeConglomerate.Logic.pdb
+C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Logic\bin\Debug\MemeConglomerate.Data.dll
+C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Logic\bin\Debug\MemeConglomerate.Model.dll
+C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Logic\bin\Debug\MemeConglomerate.Data.pdb
+C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Logic\bin\Debug\MemeConglomerate.Model.pdb
+C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Logic\obj\Debug\MemeConglomerate.Logic.csprojResolveAssemblyReference.cache
+C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Logic\obj\Debug\MemeConglomerate.Logic.dll
+C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Logic\obj\Debug\MemeConglomerate.Logic.pdb

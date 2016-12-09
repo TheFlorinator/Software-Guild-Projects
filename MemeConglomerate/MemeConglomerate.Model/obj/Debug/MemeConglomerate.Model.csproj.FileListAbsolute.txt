@@ -1,0 +1,5 @@
+C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Model\bin\Debug\MemeConglomerate.Model.dll
+C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Model\bin\Debug\MemeConglomerate.Model.pdb
+C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Model\obj\Debug\MemeConglomerate.Model.csprojResolveAssemblyReference.cache
+C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Model\obj\Debug\MemeConglomerate.Model.dll
+C:\src\softwareGuild\repos\SideProjectBiz\MemeConglomerate\MemeConglomerate.Model\obj\Debug\MemeConglomerate.Model.pdb
